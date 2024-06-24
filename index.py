@@ -1,19 +1,17 @@
+import streamlit as st
 import os
-os.system('pip install langchain-community')
+
+# Install required packages
 os.system('pip install pypdf')
 os.system('pip install langchain')
 os.system('pip install sentence-transformers')
 os.system('pip install faiss-cpu')
-import base64
 
-import streamlit as st
 from langchain_community.llms import LlamaCpp
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
-from langchain.llms import CTransformers
+from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.chains import RetrievalQA
 from langchain.document_loaders import DirectoryLoader, PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
@@ -58,8 +56,7 @@ chain = RetrievalQA.from_chain_type(
 )
 
 # Streamlit UI
-
-st.title("Medical Code Chatbot")
+st.title('Document QA System')
 
 question = st.text_input("Enter your question:")
 if question:
