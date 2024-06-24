@@ -1,8 +1,9 @@
-pip install pypdf
-pip install langchain
-pip install sentence-transformers
-pip install faiss-cpu
-pip install langchain_community
+import os
+os.system('pip install pypdf')
+os.system('pip install langchain')
+os.system('pip install sentence-transformers')
+os.system('pip install faiss-cpu')
+os.system('pip install langchain_community')
 import base64
 
 import streamlit as st
