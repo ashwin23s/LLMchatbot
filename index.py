@@ -1,4 +1,5 @@
 import os
+os.system('pip install langchain-community')
 os.system('pip install pypdf')
 os.system('pip install langchain')
 os.system('pip install sentence-transformers')
