@@ -1,4 +1,8 @@
-
+pip install pypdf
+pip install langchain
+pip install sentence-transformers
+pip install faiss-cpu
+pip install langchain_community
 import base64
 
 import streamlit as st
@@ -11,13 +15,6 @@ from langchain.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import DirectoryLoader, PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# Install required packages
-import os
-os.system('pip install pypdf')
-os.system('pip install langchain')
-os.system('pip install sentence-transformers')
-os.system('pip install faiss-cpu')
 
 # Set up the document loader and load documents
 loader = DirectoryLoader(path="downloads", glob="*.pdf", loader_cls=PyPDFLoader)
