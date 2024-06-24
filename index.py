@@ -1,12 +1,12 @@
 import streamlit as st
 import os
-pip list
 # Install required packages
 os.system('pip install pypdf')
 os.system('pip install langchain')
 os.system('pip install sentence-transformers')
 os.system('pip install faiss-cpu')
 os.system('pip install langchain-community')
+os.system('pip install llama-cpp-python')
 
 from langchain_community.llms import LlamaCpp
 from langchain.prompts import PromptTemplate
