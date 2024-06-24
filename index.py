@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-
+pip list
 # Install required packages
 os.system('pip install pypdf')
 os.system('pip install langchain')
