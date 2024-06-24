@@ -6,7 +6,7 @@ os.system('pip install pypdf')
 os.system('pip install langchain')
 os.system('pip install sentence-transformers')
 os.system('pip install faiss-cpu')
-os.system('pip install git+https://github.com/hwchase17/langchain-community.git')
+os.system('pip install langchain-community')
 
 from langchain_community.llms import LlamaCpp
 from langchain.prompts import PromptTemplate
